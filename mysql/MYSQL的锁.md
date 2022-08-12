@@ -11,9 +11,8 @@
     #查看死锁情况
     show variables like '%lock%';
 ```
-- 会话级别设置
-- innodb_deadlock_detect  死锁监控默认开启
-- innodb_lock_wait_timeout 默认等待50秒
+- innodb_deadlock_detect（全局级别） 死锁监控默认开启``set global innodb_deadlock_detect = 1``
+- innodb_lock_wait_timeout（会话级别） 默认等待50秒``set innodb_lock_wait_timeout = 50``
 
 ```sql
     #显示当前锁状态（冲突）
@@ -25,10 +24,10 @@
 - lock_type
   - RECORD 行锁
   - TABLE 表锁
-  - 
+  
 - lock_mode
-  - X Exclusive 排它锁
-  - S Share 共享锁
+  - X：Exclusive 排它锁
+  - S：Share 共享锁
 - 事务的结束也伴随着行锁的释放。 
 ### 锁的分类
 
