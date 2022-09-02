@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 元素约束，books下面有至少一个book，和0或1个的shop -->
+<!ELEMENT books (book+, shop?)>
+<!-- book下面必须得有 3个元素（按顺序）1个时间，可能没有作者，和一定得有的价格 -->
+<!ELEMENT book (time, author?, price)>
+<!ELEMENT shop (#PCDATA)>
+
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+<!-- 约束属性，author作者元素里面，country国家属性必须填写，类型为CDATA（字符串），age年龄属性是可选 -->
+<!ATTLIST author country CDATA #REQUIRED age CDATA #IMPLIED>
+

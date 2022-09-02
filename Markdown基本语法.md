@@ -40,6 +40,12 @@ class Hello {
 ## 链接
 [我的github仓库](https://github.com/2496845258/Practical_training_3)
 ***
+
+注释
+<?我是注释不被显示?>
+``` <?注释?> ```
+
+---
 ## 任务列表
 - [ ] 你好
 - [ ] 不好

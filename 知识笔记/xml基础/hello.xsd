@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- xmlns 引用外部的约束（别的schma文件） -->
+<!-- targetNamespace 定义命名空间（其实就是被引用的xml的名称）（相当于这个文件的所在的名称） -->
+<!-- elementFormDefault="qualified" 必须写-->
+<schema
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="luzhao"
+        elementFormDefault="qualified">
+
+    <element name="books"> <!-- 定义根标签 -->
+        <!-- 定义子标签的流程-->
+        <complexType>
+            <sequence>
+                <element name="book">
+                    <complexType> <!-- 标明为复合标签 -->
+                        <sequence> <!-- 有子标签必须写 -->
+                            <!-- 2个非复合标签，也就是简单标签 -->
+                            <element name="bookName" type="string"/>
+                            <element name="price" type="double"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <!-- 我只是一个简单的标签 -->
+                <element name="hello" type="string"/>
+            </sequence>
+        </complexType>
+        <!--在上面定义桥套标签-->
+    </element>
+</schema>

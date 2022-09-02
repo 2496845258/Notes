@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- xmlns 引用的命名空间 -->
+<!-- xmlns:xsi 表明这个xml是一个具体的xml文件而不是一个schema约束文件 -->
+<!-- xsi:schemaLocation 表明这个xml文件是哪个命名空间的哪个约束文件-->
+<books
+    xmlns="luzhao"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="luzhao  hello.xsd">
+    <book>
+        <bookName>高等数学</bookName>
+        <price>200.0</price>
+    </book>
+
+    <hello>hello</hello>
+</books>

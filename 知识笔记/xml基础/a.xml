@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 这个也能获取约束文件 -->
+<!-- <?xml-model href="a.dtd" type="application/xml-dtd"?> -->
+
+<!-- 告诉浏览器约束文件 -->
+<!DOCTYPE books SYSTEM "a.dtd">
+<books>
+    <book>
+        <time>2020-11-20</time>
+        <author country="China" age="20">小王</author>
+        <price>18.5</price>
+    </book>
+    <shop>光明书店</shop>
+</books>
